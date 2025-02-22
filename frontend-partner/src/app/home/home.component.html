@@ -1,0 +1,26 @@
+<main class="">
+  <form
+    [formGroup]="homeService.form"
+    (submit)="login()"
+    class="p-4 w-screen h-screen flex items-center justify-center flex-col"
+  >
+    <mat-form-field class="w-full">
+      <mat-label>Username</mat-label>
+      <input
+        [formControl]="homeService.form.controls.username"
+        matInput
+        placeholder="Username"
+      />
+    </mat-form-field>
+
+    <mat-form-field class="w-full">
+      <mat-label>Password</mat-label>
+      <input
+        [formControl]="homeService.form.controls.password"
+        matInput
+        placeholder="Password"
+      />
+    </mat-form-field>
+    <button type="submit" mat-flat-button>Login</button>
+  </form>
+</main>
